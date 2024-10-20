@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/profile.css">
+    <title>Учебный сайт</title>
+</head>
+<body>
+    <nav class="navbar navbar-profile-manager">
+        <div class="container">
+            <a class="navbar-profile" href="#">studentStats</a>
+            <div class="collapse navbar-profile">
+                <ul class="navbar-prof ms-auto">
+                    <li onclick="scrollToSection('groups')">Учебные группы</li>
+                    <li onclick="scrollToSection('courses')">Учебные курсы</li>
+                    <li onclick="scrollToSection('statistics')">Административная панель</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="groups">
+            <h2>Учебные группы</h2>
+            <button class="btn" onclick="createGroup()">Создать учебную группу</button>
+            <button class="btn" onclick="editGroup()">Редактировать группу</button>
+            <h3>Список групп</h3>
+            <ul id="groupList">
+                <li>Группа 1</li>
+                <li>Группа 2</li>
+                <li>Группа 3</li>
+            </ul>
+        </section>
+
+        <section id="courses">
+            <h2>Управление учебными курсами</h2>
+            <button class="btn" onclick="createCourse()">Создать курс</button>
+            <button class="btn" onclick="editCourse()">Редактировать курс</button>
+            <button class="btn" onclick="deleteCourse()">Удалить курс</button>
+            <h3>Список курсов</h3>
+            <ul id="courseList">
+                <li>Курс 1</li>
+                <li>Курс 2</li>
+                <li>Курс 3</li>
+            </ul>
+        </section>
+
+        <section id="competences">
+            <h2>Компетенции</h2>
+            <button class="btn" onclick="uploadCompetences()">Добавить компетенции</button>
+            <h3>Список компетенций</h3>
+            <ul id="competenceList">
+                <li>Компетенция 1</li>
+                <li>Компетенция 2</li>
+                <li>Компетенция 3</li>
+            </ul>
+        </section>
+
+        <section id="statistics">
+            <h2>Административная панель</h2>
+            <div class="competencies">
+                <h3>Управление пользователями</h3>
+                <button class="btn" onclick="manageUsers()">Управление пользователями</button>
+                <h3>Статистика по обучению и вакансиям</h3>
+                <button class="btn" onclick="viewStatistics()">Посмотреть статистику</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Учебный сайт группы О-22-ИАС-аид-С</p>
+    </footer>
+
+    <script>
+        function createGroup() {
+            const groupName = prompt('Введите название для новой учебной группы:');
+            if (groupName) {
+                const groupList = document.getElementById('groupList');
+                const newGroup = document.createElement('li');
+                newGroup.textContent = groupName;
+                groupList.appendChild(newGroup);
+            }
+        }
+
+        function editGroup() {
+            alert('Функция редактирования группы не реализована.'); 
+        }
+
+        function createCourse() {
+            const courseName = prompt('Введите название для нового курса:');
+            if (courseName) {
+                const courseList = document.getElementById('courseList');
+                const newCourse = document.createElement('li');
+                newCourse.textContent = courseName;
+                courseList.appendChild(newCourse);
+            }
+        }
+
+        function editCourse() {
+            alert('Функция редактирования курса не реализована.'); 
+        }
+
+        function deleteCourse() {
+            alert('Функция удаления курса не реализована.'); 
+        }
+
+        function uploadCompetences() {
+            alert('Функция добавления компетенций не реализована.'); 
+        }
+
+        function manageUsers() {
+            alert('Функция управления пользователями не реализована.'); 
+        }
+
+        function viewStatistics() {
+            alert('Функция просмотра статистики не реализована.'); 
+        }
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

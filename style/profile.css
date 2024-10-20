@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "vk-sans";
+    src: url(../fonts/VKSansDisplay-Medium.ttf);
+}
+
+html, body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+body {
+    background-color: #0c0874;
+    color: #3912af;
+}
+
+.navbar-profile-manager {
+    border-bottom: 5pt solid white;
+    width: 100vw;
+    height: auto; 
+    position: fixed;
+    top: 0;
+    background-color: #0c0874; 
+    z-index: 1000; 
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.navbar-profile {
+    font-family: "vk-sans";
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.navbar-profile ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.navbar-profile li {
+    margin: 0 1em;
+    color: white;
+    cursor: pointer;
+}
+
+.center-block {
+    padding-top: 10em;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+
+h1, h2 {
+    display: block;
+    font-family: "vk-sans";
+    background: linear-gradient(to left, #ffffff, #bfbfbf);
+    animation: gradient 3s infinite linear;
+    background-size: 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.btn {
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #8c04a8;
+    color: white;
+}
+
+footer {
+    border-top: 5pt solid white;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+    color:white;
+}
+
+main {
+    flex-grow: 1;
+    padding-top: 5em; 
+    color: white;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 80% 0%;
+    }
+    50% {
+        background-position: 20% 100%;
+    }
+    100% {
+        background-position: 80% 0%;
+    }
+}
+
+
+.competencies {
+    margin-top: 1em;
+}
+
+
